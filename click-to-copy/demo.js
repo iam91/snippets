@@ -8,19 +8,19 @@ window.onload = function(){
   };
 
   function copy(target){
-			var r = document.createRange();
-			r.selectNodeContents(target);
+	var r = document.createRange();
+	r.selectNodeContents(target);
 
-			var sel = getSelection();
-			sel.removeAllRanges();
-			sel.addRange(r);
+	var sel = getSelection();
+	sel.removeAllRanges();
+	sel.addRange(r);
 
-			document.execCommand('copy');
+	document.execCommand('copy');
 
-      //in case content of target is showed selected
-			sel.removeAllRanges();
-			r.detach();
-			r = null;
-			sel = null;
+	//in case content of target is showed selected
+	sel.removeAllRanges();
+	r.detach();
+	r = null;
+	sel = null;
   }
 };
